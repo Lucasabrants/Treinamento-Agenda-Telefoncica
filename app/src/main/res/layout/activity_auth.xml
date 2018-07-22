@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".auth.view.activity.AuthActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imagemLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher_round" />
+
+    <EditText
+        android:id="@+id/campoEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/campoSenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/senha"
+        android:inputType="numberPassword"
+        app:layout_constraintEnd_toEndOf="@+id/campoEmail"
+        app:layout_constraintStart_toStartOf="@+id/campoEmail"
+        app:layout_constraintTop_toBottomOf="@+id/campoEmail" />
+
+    <Button
+        android:id="@+id/botaoLogin"
+        android:layout_width="114dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/botao_login"
+        app:layout_constraintEnd_toEndOf="@+id/campoSenha"
+        app:layout_constraintStart_toStartOf="@+id/campoSenha"
+        app:layout_constraintTop_toBottomOf="@+id/campoSenha" />
+
+    <Button
+        android:id="@+id/botaoSignUp"
+        android:layout_width="114dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/botao_signup"
+        app:layout_constraintEnd_toEndOf="@+id/botaoLogin"
+        app:layout_constraintStart_toStartOf="@+id/botaoLogin"
+        app:layout_constraintTop_toBottomOf="@+id/botaoLogin" />
+
+</android.support.constraint.ConstraintLayout>

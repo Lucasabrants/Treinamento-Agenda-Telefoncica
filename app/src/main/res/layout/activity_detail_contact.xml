@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".contacts.view.activity.DetailContactActivity">
+
+    <ImageView
+        android:id="@+id/imagemContato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher_round" />
+
+    <EditText
+        android:id="@+id/canpoNomeDetalhe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:hint="@string/campo_nome"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagemContato" />
+
+    <EditText
+        android:id="@+id/campoPhoneDetalhe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:inputType="phone"
+        android:hint="@string/campo_phone"
+        app:layout_constraintEnd_toEndOf="@+id/canpoNomeDetalhe"
+        app:layout_constraintStart_toStartOf="@+id/canpoNomeDetalhe"
+        app:layout_constraintTop_toBottomOf="@+id/canpoNomeDetalhe" />
+
+    <EditText
+        android:id="@+id/campoEmailDetalhe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:inputType="textEmailAddress"
+        android:hint="@string/campo_email_contato"
+        app:layout_constraintEnd_toEndOf="@+id/campoPhoneDetalhe"
+        app:layout_constraintStart_toStartOf="@+id/campoPhoneDetalhe"
+        app:layout_constraintTop_toBottomOf="@+id/campoPhoneDetalhe" />
+
+    <EditText
+        android:id="@+id/campoDateDetalhe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:inputType="date"
+        android:hint="@string/campo_aniversario"
+        app:layout_constraintEnd_toEndOf="@+id/campoEmailDetalhe"
+        app:layout_constraintStart_toStartOf="@+id/campoEmailDetalhe"
+        app:layout_constraintTop_toBottomOf="@+id/campoEmailDetalhe" />
+
+    <Button
+        android:id="@+id/botaoSalvar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/botao_salvar"
+        app:layout_constraintEnd_toEndOf="@+id/campoDateDetalhe"
+        app:layout_constraintStart_toStartOf="@+id/campoDateDetalhe"
+        app:layout_constraintTop_toBottomOf="@+id/campoDateDetalhe" />
+
+    <Button
+        android:id="@+id/botaoApagar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/botao_apagar"
+        app:layout_constraintEnd_toEndOf="@+id/botaoSalvar"
+        app:layout_constraintStart_toStartOf="@+id/botaoSalvar"
+        app:layout_constraintTop_toBottomOf="@+id/botaoSalvar" />
+
+
+</android.support.constraint.ConstraintLayout>

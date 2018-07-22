@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Agenda Telefônica</string>
+    <string name="email">E-mail</string>
+    <string name="senha">Senha</string>
+    <string name="botao_login">Login</string>
+    <string name="botao_signup">Criar Conta</string>
+    <string name="campo_nome">Nome</string>
+    <string name="campo_phone">Telefône</string>
+    <string name="campo_email_contato">E-mail</string>
+    <string name="campo_aniversario">Aniversário</string>
+    <string name="botao_salvar">Salvar Contato</string>
+    <string name="botao_editar">Editar Contato</string>
+    <string name="botao_apagar">Apagar Contato</string>
+    <string name="erro_login">Usuário não cadastrado!</string>
+    <string name="R_string_erro_sign_up">Não foi possivel criar esse usuário!</string>
+    <string name="mensagem_contacriada">Conta criada com sucesso.</string>
+    <string name="mensagem_login">Login realizado com sucesso.</string>
+</resources>
