@@ -12,7 +12,8 @@
     <string name="botao_editar">Editar Contato</string>
     <string name="botao_apagar">Apagar Contato</string>
     <string name="erro_login">Usuário não cadastrado!</string>
-    <string name="R_string_erro_sign_up">Não foi possivel criar esse usuário!</string>
+    <string name="string_erro_sign_up">Não foi possivel criar esse usuário!</string>
     <string name="mensagem_contacriada">Conta criada com sucesso.</string>
     <string name="mensagem_login">Login realizado com sucesso.</string>
+    <string name="string_erro_listar_contatos">Erro ao acessar a lista de contatos</string>
 </resources>

@@ -22,18 +22,23 @@ object ContactsDatabase {
 
         Realm.getDefaultInstance().use { realm ->
 
-            onSuccess(realm.where(Contact::class.java).findAll().sort("id"))
+            onSuccess(realm.where(Contact::class.java).findAll().sort("name"))
 
         }
     }
 
-    fun salvarContatos(contacts: RealmResults<Contact>, onSuccess: () -> Unit) {
+    fun salvarContatos(contacts: List<Contact>, onSuccess: () -> Unit) {
 
-        Realm.getDefaultInstance().use{realm->
+        Realm.getDefaultInstance().use { realm ->
 
-            realm.beginTransaction()
-            realm.copyToRealm(contacts)
-            realm.commitTransaction()
+            contacts.forEach {
+
+                realm.beginTransaction()
+                realm.copyToRealm(it)
+                realm.commitTransaction()
+
+            }
+
             onSuccess()
         }
     }

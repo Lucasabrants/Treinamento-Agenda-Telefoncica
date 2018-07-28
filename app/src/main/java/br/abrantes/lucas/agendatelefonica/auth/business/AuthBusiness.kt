@@ -29,7 +29,7 @@ object AuthBusiness {
         AuthNetwork.criarConta(user, {
             onSuccess()
         }, {
-            onError(R.string.R_string_erro_sign_up)
+            onError(R.string.string_erro_sign_up)
         })
     }
 

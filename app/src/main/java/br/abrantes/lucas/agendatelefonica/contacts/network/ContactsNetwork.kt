@@ -23,7 +23,7 @@ object ContactsNetwork {
                 .build()
     }
 
-    fun getContatos(user: User, onSuccess: (contacts: RealmResults<Contact>) -> Unit, onError: () -> Unit) {
+    fun getContatos(user: User, onSuccess: (contacts: List<Contact>) -> Unit, onError: () -> Unit) {
 
         var uid: String = ""
         var client: String = ""
@@ -42,11 +42,17 @@ object ContactsNetwork {
         contactsAPI.getContatos(uid, client, accessToken)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe({ contatos ->
+                .subscribe({contacts_list->
 
-                    onSuccess(contatos)
+                    val contatos = contacts_list.body()
 
-                }, {
+                    contatos?.let{
+
+                        onSuccess(it)
+
+                    }
+
+                },{
 
                     onError()
                 })

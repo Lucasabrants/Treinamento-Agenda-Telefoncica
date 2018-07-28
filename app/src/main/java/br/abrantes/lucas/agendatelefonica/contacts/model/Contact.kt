@@ -11,5 +11,5 @@ open class Contact : RealmObject() {
     var email: String? = null
     var phone: String? = null
     var picture: String = "http://www.topimagens.com.br/imagens/imagens-mais-novas.jpg"
-    var birth: String? = null
+    var birth: Int? = null
 }
